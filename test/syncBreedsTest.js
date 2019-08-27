@@ -12,4 +12,8 @@ describe('#breedDetails', () => {
     const balinese = breedDetails('Balinese');
     assert.equal(expectedDesc, balinese);
   });
+  it('returns undefined for a breed that does not exist', () => {
+    const test = breedDetails('Test');
+    assert.equal(undefined, test);
+  });
 });
